@@ -242,6 +242,82 @@ input::placeholder {
 .card {
   margin-bottom: 1rem;
 }
+/* 📱 Versión para pantallas chicas (teléfonos) */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  main.container-fluid {
+    padding: 0.8rem !important;
+  }
+
+  /* Las dos tarjetas se apilan con margen entre ellas */
+  .row.g-4 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .col-md-4,
+  .col-md-8 {
+    width: 100% !important;
+  }
+
+  .card {
+    padding: 1rem !important;
+    border-radius: 1rem;
+    animation: fadeInUp 0.5s ease both;
+  }
+
+  /* Inputs y botones ocupan toda la pantalla */
+  .d-flex.flex-wrap input,
+  .d-flex.flex-wrap button {
+    width: 100%;
+  }
+
+  .d-flex.flex-wrap {
+    gap: 0.6rem !important;
+  }
+
+  /* Tabla scrolleable horizontal si hace falta */
+  .table-responsive {
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+
+  .table th,
+  .table td {
+    font-size: 0.9rem;
+    padding: 0.4rem;
+  }
+
+  /* Ajustes de títulos */
+  h4, h5, #tituloMesa {
+    text-align: center !important;
+  }
+
+  #tituloMesa {
+    font-size: 1.1rem;
+  }
+
+  #total {
+    font-size: 1.3rem;
+    text-align: center !important;
+  }
+}
+
+/* 🎬 Animación suave al aparecer tarjetas y tabla */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
 
