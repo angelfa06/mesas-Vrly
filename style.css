@@ -114,28 +114,134 @@ input::placeholder {
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+  .col-md-4,
+  .col-md-8 {
+    width: 100%;
+  }
+
+  main.container-fluid {
+    padding: 0.5rem !important;
+  }
+
+  .card {
+    padding: 1rem !important;
+  }
+
   .d-flex.flex-wrap input,
   .d-flex.flex-wrap button {
     width: 100%;
   }
 
-  .text-end {
+  .d-flex.flex-wrap {
+    gap: 0.5rem !important;
+  }
+
+  h4, h5, .text-end {
     text-align: center !important;
   }
 
-  h4, h5 {
-    text-align: center;
+  #tituloMesa {
+    font-size: 1.2rem;
   }
 
-  .btn {
+  #total {
+    font-size: 1.3rem;
+  }
+}
+
+/* Evita que la tabla se corte */
+.table-responsive {
+  overflow-x: auto;
+  min-width: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: #444 #1e1e1e;
+}
+
+.table-responsive::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 4px;
+}
+
+@media (max-width: 576px) {
+  table th, table td {
+    font-size: 0.85rem;
+    padding: 0.4rem;
+  }
+}
+
+/* 📱 Versión para pantallas chicas (teléfonos) */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  main.container-fluid {
+    padding: 0.8rem !important;
+  }
+
+  /* Las dos tarjetas se apilan con margen entre ellas */
+  .row.g-4 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .col-md-4,
+  .col-md-8 {
+    width: 100% !important;
+  }
+
+  .card {
+    padding: 1rem !important;
+    border-radius: 1rem;
+  }
+
+  /* Inputs y botones ocupan toda la pantalla */
+  .d-flex.flex-wrap input,
+  .d-flex.flex-wrap button {
+    width: 100%;
+  }
+
+  .d-flex.flex-wrap {
+    gap: 0.6rem !important;
+  }
+
+  /* Tabla scrolleable horizontal si hace falta */
+  .table-responsive {
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+
+  .table th,
+  .table td {
     font-size: 0.9rem;
+    padding: 0.4rem;
+  }
+
+  /* Ajustes de títulos */
+  h4, h5, #tituloMesa {
+    text-align: center !important;
+  }
+
+  #tituloMesa {
+    font-size: 1.1rem;
+  }
+
+  #total {
+    font-size: 1.3rem;
+    text-align: center !important;
   }
 }
 
-#total {
-  color: #fff !important;
-  font-size: 1.4rem;
+/* Extra: que las tarjetas tengan una ligera sombra y respiren */
+.card {
+  margin-bottom: 1rem;
 }
+
 
 
