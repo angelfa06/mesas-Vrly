@@ -1,0 +1,141 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #f8f9fa;
+}
+
+/* HEADER */
+.header-gradient {
+  background: linear-gradient(135deg, #6a0000, #b30000);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* TARJETAS */
+.bg-secondary-dark {
+  background-color: #1e1e1e;
+  border: 1px solid #2a2a2a;
+}
+
+.card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* TITULOS DE TARJETAS (Mesas y Mesa: ...) */
+.card h4 {
+  color: #fff !important;
+
+  padding-bottom: 6px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+
+/* BOTONES */
+.btn-danger {
+  background-color: #b30000;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-danger:hover {
+  background-color: #d10000;
+  transform: scale(1.02);
+}
+
+.btn-primary {
+  background-color: #004c99;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0066cc;
+  transform: scale(1.02);
+}
+
+.btn i {
+  pointer-events: none;
+}
+
+/* INPUTS */
+input.form-control {
+  background-color: #2b2b2b;
+  border: 1px solid #444;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+input.form-control:focus {
+  border-color: #b30000;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+  background-color: #1e1e1e;
+}
+
+input::placeholder {
+  color: #ffffff !important;
+}
+
+/* TABLA */
+.table-dark th {
+  background-color: #2a2a2a !important;
+  border: none;
+}
+
+.table-dark td {
+  border-color: #2e2e2e;
+}
+
+.table-dark tbody tr:hover {
+  background-color: #242424;
+  transition: 0.2s;
+}
+
+.table-responsive {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* TOTAL */
+#total {
+  font-size: 1.4rem;
+}
+
+/* ANIMACIONES (cuando se agregan mesas o productos) */
+.animate-fade {
+  animation: fadeInUp 0.4s ease;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .d-flex.flex-wrap input,
+  .d-flex.flex-wrap button {
+    width: 100%;
+  }
+
+  .text-end {
+    text-align: center !important;
+  }
+
+  h4, h5 {
+    text-align: center;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+  }
+}
+
+#total {
+  color: #fff !important;
+  font-size: 1.4rem;
+}
+
+
